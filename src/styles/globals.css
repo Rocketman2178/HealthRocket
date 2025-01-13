@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-health-dark text-health-light;
+  }
+}
+
+@layer components {
+  .health-card {
+    @apply bg-gray-800 rounded-xl border border-gray-700 p-6;
+  }
+  
+  .health-progress {
+    @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+  }
+  
+  .health-progress-bar {
+    @apply h-full bg-health-primary transition-all duration-500;
+  }
+}

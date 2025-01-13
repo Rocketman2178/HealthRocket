@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/rocket-animations.css';
+
+@layer base {
+  body {
+    @apply bg-health-dark text-health-light;
+  }
+}
+
+@layer components {
+  .health-card {
+    @apply bg-gray-800 rounded-xl border border-gray-700 p-6;
+  }
+  
+  .health-progress {
+    @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+  }
+  
+  .health-progress-bar {
+    @apply h-full bg-health-primary transition-all duration-500;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-flame {
+    animation: flame 1s ease-in-out infinite;
+  }
+
+  .animate-inner-flame {
+    animation: inner-flame 0.8s ease-in-out infinite;
+  }
+
+  .animate-particle {
+    animation: particle 1s ease-out infinite;
+  }
+
+  .animate-sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .animate-smoke {
+    animation: smoke 2s ease-out infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 4s ease-in-out infinite;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 4s ease-in-out infinite;
+  }
+}

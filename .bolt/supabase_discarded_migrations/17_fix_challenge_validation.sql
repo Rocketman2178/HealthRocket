@@ -1,0 +1,1 @@
+-- Migration removed - using application-level validation instead

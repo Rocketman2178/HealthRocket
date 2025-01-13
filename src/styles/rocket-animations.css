@@ -1,0 +1,79 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes flame {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); }
+}
+
+@keyframes inner-flame {
+  0%, 100% { transform: scaleY(0.9); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes particle {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx, 10px), var(--ty, 10px)) scale(0); opacity: 0; }
+}
+
+@keyframes sparkle {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1) rotate(180deg); opacity: 1; }
+  100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes smoke {
+  0% { transform: translateY(0) scale(1); opacity: 0.2; }
+  100% { transform: translateY(-20px) scale(2); opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.5); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-flame {
+  animation: flame 1s ease-in-out infinite;
+}
+
+.animate-inner-flame {
+  animation: inner-flame 0.8s ease-in-out infinite;
+}
+
+.animate-particle-1 {
+  --tx: -10px;
+  --ty: 20px;
+  animation: particle 1s ease-out infinite;
+}
+
+.animate-particle-2 {
+  --tx: 10px;
+  --ty: 20px;
+  animation: particle 1s ease-out infinite 0.2s;
+}
+
+.animate-particle-3 {
+  --tx: 0px;
+  --ty: 15px;
+  animation: particle 1s ease-out infinite 0.4s;
+}
+
+.animate-sparkle-1 { animation: sparkle 2s ease-in-out infinite; }
+.animate-sparkle-2 { animation: sparkle 2s ease-in-out infinite 0.4s; }
+.animate-sparkle-3 { animation: sparkle 2s ease-in-out infinite 0.8s; }
+.animate-sparkle-4 { animation: sparkle 2s ease-in-out infinite 1.2s; }
+.animate-sparkle-5 { animation: sparkle 2s ease-in-out infinite 1.6s; }
+
+.animate-smoke-1 { animation: smoke 2s ease-out infinite; }
+.animate-smoke-2 { animation: smoke 2s ease-out infinite 0.6s; }
+.animate-smoke-3 { animation: smoke 2s ease-out infinite 1.2s; }
+
+.animate-twinkle-1 { animation: twinkle 4s ease-in-out infinite; }
+.animate-twinkle-2 { animation: twinkle 4s ease-in-out infinite 1.3s; }
+.animate-twinkle-3 { animation: twinkle 4s ease-in-out infinite 2.6s; }
